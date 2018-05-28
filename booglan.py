@@ -5,6 +5,7 @@
 #   count_verbs
 #   count_verbs_in_subjunctive_form
 #   create_vocabulary_list
+#   count_pretty_numbers
 
 def count_prepositions(text):
     words = text.split(' ')
@@ -38,6 +39,7 @@ def count_verbs_in_subjunctive_form(text):
     
     return counter
 
+
 def count_pretty_numbers(text):
     words = text.split(' ')
     unique_words = _remove_duplicate_items(words)
@@ -58,6 +60,16 @@ def create_vocabulary_list(str):
 
 
 # HELPERS
+ALPHABET_DICT = {
+    't': 0, 'w': 1, 'h': 2,
+    'z': 3, 'k': 4, 'd': 5,
+    'f': 6, 'v': 7, 'c': 8,
+    'j': 9, 'x': 10, 'l': 11,
+    'r': 12, 'n': 13, 'q': 14,
+    'm': 15, 'g': 16, 'p': 17,
+    's': 18, 'b': 19
+}
+
 def _is_foo_letter(letter):
     return letter in 'rtcdb'
 
@@ -101,6 +113,7 @@ def _is_verb_in_subjunctive_form(verb):
     
     return True
 
+
 def _convert_to_decimal_numbers(numbers):
     decimal_numbers = []
     
@@ -108,37 +121,22 @@ def _convert_to_decimal_numbers(numbers):
         digits = list(number)
 
         index = 0
-        total = 0
+        decimal_number = 0
         for digit in digits:
-            value = BOOGLAN_ALPHABET_DICT[digit]
+            value = ALPHABET_DICT[digit]
             multiplier_factor = 20 ** index
             partial = value * multiplier_factor
-            total += partial
+            decimal_number += partial
             index += 1
 
-        decimal_numbers.append(total)
+        decimal_numbers.append(decimal_number)
     
     return decimal_numbers
 
 
 '''
-    Um dicionário para atribuir pesos a cada letra e assim ter uma forma de comparar
-    quem tem precedencia na ordenação.
-'''
-BOOGLAN_ALPHABET_DICT = {
-    't': 0, 'w': 1, 'h': 2,
-    'z': 3, 'k': 4, 'd': 5,
-    'f': 6, 'v': 7, 'c': 8,
-    'j': 9, 'x': 10, 'l': 11,
-    'r': 12, 'n': 13, 'q': 14,
-    'm': 15, 'g': 16, 'p': 17,
-    's': 18, 'b': 19
-}
-
-
-'''
     A função sorted([], cmp=function) da biblioteca padrão do Python ordena uma lista. Ela aceita
-    como parâmetro uma função de comparação. Muitas linguagens possuem esse recurso e o Python é
+    como parâmetro uma função de comparação (cmp). Muitas linguagens possuem esse recurso e o Python é
     uma delas. A ideia dessa função de comparação é dizer para o sorted() COMO ele deve ordenar a lista.
 
     Funciona da seguinte forma:
@@ -165,7 +163,8 @@ def _compare_booglan_alphabetical_order(a, b):
         # "b" vem primeiro que "a"
         return 1
 
-    diff = BOOGLAN_ALPHABET_DICT[a[0]] - BOOGLAN_ALPHABET_DICT[b[0]]
+    diff = ALPHABET_DICT[a[0]] - ALPHABET_DICT[b[0]]
+
     if diff != 0:
         return diff
     else:
