@@ -2,7 +2,6 @@
 A simple service to deal with a text in Booglan language.
 ```
 
-
 # What is Booglan?
 Archeologists found a misterious scroll containing two texts:
 
@@ -31,12 +30,25 @@ Booglans consider a number to be pretty if it satisfies all of the following pro
 
 When we consider Text A as a list of numbers (that is, interpreting each word as a number as per the rules we explained above), we notice that there are 140 distinct pretty numbers.
 
+
 # Questions:
 - How many prepositions are there in Text B?
 - How many verbs are there in Text B?
 - How many of those verbs in Text B are in the subjunctive form?
 - How many distinct pretty numbers are there in Text B?
 - Make an ordered vocabulary list from Text B.
+
+
+# Answers:
+```
+# TEXT B:
+
+- Total of prepositions: 67
+- Total of verbs: 71
+- Total of verbs in the subjunctive form: 47
+- Total of pretty numbers: 142
+- Vocabulary list: ttcv twhhp twz twmbx twpzb thdwkrmf tzhhm tzcm tznkx tfgr tvwkwb tvb tcgtxw tjfglj tjphzphw tjbtkwp txh tlfcmw trhm trrzq tndsshj tqznjxw tqcglfb tgbf tgbgsgkk tppgq tbkbhkj whjpz whrrvv whqs wzgctbnl wklqzbv wdczjl wdcp wdn wdqr wfs wfbgktm wxnzwrkl wrtpzj wrnh wqd wqpfzj wmgtm wggrxsgv wgbj wpwvqhqg wsf wsfzsjtw wscbg wsntdfw wbnl wbmh htfx htp hwlfxmg hwsnlh hhxqdzx hzvvt hzlcgwgb hkkcvns hdtsb hfrcwxxb hvjrpqjl hjq hltpv hlvmrnpm hlrkwf hlnf hqlxsmzw hqrwq hmkrdc hmmwsnk hmptcqlv hgncbbjh hgsc hphrqqd hphgxtbr hpqk hsfj hbdqsbl hbqz hbp hbsf ztwtmwl ztwcfq ztwgjrwg zwtskvw zwh zwhhrrd zzcm zzcgdl zkhfqnlw zkc zknspwl zdvrwkz zdqkv zdm zdp zftk zfdwv zfqvbw zvvfkz zvrlj zctbl zcddhx zcg zcszw zxtfnll zxn zxsndg zlpjk zrmh zmwxqhj zgtqxrz zgz zgvz zgvmbbs zgqhvhqp zgs zptzwfh zppxnjql zslbzz zsmstwk zbtns zbgpm ktmh ktmhkx kwzrmld khcpkl kzzvplf kzktrvzg kzdq kzpdffgb kkscv kdkc kdj kfmgz kvfn kvc kvbwcw kccl kjcxrgz kjgmtxvs kxkczmd klfqccx klvslp klrqzsdc kls krtzx krdjjdd kgbx kppq kpsfjvmp kpbnbws kszcqm ksv ksxxsw kssz ksbbvw dtg dwkfp dwq dhz dhvz dhxf dhms dzxjcp dkw dknspp dddwp dfwxhwpq dfjp dvfswgpw dcvvtqd dcvgtdxb djn dxw dxlcjtql dxrlfcc dlhwpkg dlhzbwqz dlvrwms dnqh dqdf dqcfq dqgwfcjw dmrk dghkxgn dgqsrfml dgmg dpbkjglj dsclq dsx dbjqgbsz dbgkqjmm fwtngzq fwhhbp fwlxrl fhdsvjh fzxqv fzxgsrv fzrr fzbqfvw fkt fkfchpvm fdwsd fvttnv fvd fckczmjr fcnjkzf fjzcjgt fjxvwfqc fjbvx fxmq fxghv flzq flvvqw fllhsgpb flmnzn flg fnk fqwv fmmtkb fgt fgz fgcltmlv fphv fpzzfs fbmgck vtgqxbwz vww vzckfjhx vznm vdh vdc vfmcgq vfbn vvdldzw vvxtd vvpb vcjhrxxk vcrzwgn vcrqb vjd vxx vxxsfj vltqgfvd vll vlnvm vrnwl vrghmnnb vrsg vnkjbl vnsppv vqxtz vqlqn vqqlvpxr vmtf vmbdrcp vgbgpjth vszqglqq vsfwrmk vssnlv ctkhk ctlnv cht chcfdj chbnltpr czmrsfk ckttxjzw ckwpnskt ckhwjfsg cksqhgnx cdh cdlss cfhxcg cvm cvsch cjt cldnp crt crk crntslnh crscbznr cqfqf cqpprm cmw cgk cgkrn cgksrct cgbbdm cslq cbhkhv cbs jtdl jwjjsndt jhzvkwm jhvfwf jhrhv jzt jzhs jkdtx jkc jkxw jkxhqq jkqldq jkpcq jdvsnnw jdrj jfhphpd jcdmckbb jcjnphr jjdxk jjlc jxw jxvxxw jqgb jmmsm jgzlmml jgvjhhps jptn jpwbvnmr jstcv jslwxgjj jbx xtwjmqwv xwwtbh xwkknr xwcwkhq xwppdz xhh xhrtwbxr xhpwf xzmnwb xdhdkx xdkkg xdgxft xdbnb xfgxjvts xvdfcslp xjlvqmvt xjpkpgxt xxhjgs xxzdbwk xlrqjnfh xlghbtmj xnwzv xqqgtmn xqqp xmcddbn xgws xpn xbxdn ltkpxt ltll ltsdw lwkxjmtf lhc lhrs lzvfrbkp lzjftjl lzrrgdf ldths ldfqkpz ldx lfftwmw lfcfh lvcrbms lvqhvlv lcxcftm lcl lcn ljnfwmt llrlwkdl lnh lnkqmcb lnjnk lmzzqk lgvwlp lgrb lgqpdw lpl lsxpds lsgdgj rwz rhngpzt rhggsk rkmhph rdrtf rvvvrk rvlwpbb rczp rcnv rjprjpt rxngmrv rxgpkh rrpfjck rnpcdk rmvzbx rmvgjxtv rgjbnrnc rstnhrb rsh rsfpp rsr ntj ntmbc nwxdpwvd nhtspn nhnmlkk nzkvk ncm ncgsq njqc nxztbqdk nxf nxvfgxn nxlmhgk nxrs nlcmcp nrw nrwbhq nndbv nnqf nmvs ngrqxb ngp npg nspfs nbvmv nbjc nbjp nbm qtgb qhlww qhbqslp qdkxddbk qdbzm qfln qfrzjb qvcpdh qvb qcwrv qcvqgz qccxb qjkfs qjfhmh qxb qxbjnqzn qlcgcxzf qrlx qnmdxgmx qqwpppfq qqhx qqlr qmbvtrcd qptb qpmlpbcz qbkr qbpl mtl mwvxbg mwrjw mwrqh mhgh mkg mdbvdjks mfkvgms mffgf mcsdj mlnsj mrvkjdr mrlqtwwr mqjhshs mqsgqvg mmj mmjjnm mmrvcn mgsjdsv mpds mpntrzt mpgk mszwfkw msjdjwxk mslz mbfd mbng gwd gwfd ghw gzwgxmj gzzvncct gdwwv gdckm gfjffg gfrdzf gvb gjhxqf gxdgrqlc gxqvvk glsl grplsh gnn gnspkh gqjcl gqrk gmt gmlws gmgzdx gms gmbjbg ggw gpch gbtjpc gbvdx gbpckhbc pwmb phczb pkkqz pvzkmj pvkz pvmlbnnf pjhf pjk pjcxr pjngm pjm pjpv pxwtzf pxh pxxph pxscnhc pntrwc pqzkmwzf pqckzf pglxhxp pgqhcgc ppvr pprsft swkwk swg szk szfxh sfsgt svhpjc svzs sccfq scxp scbndf sxw sxdcq sxfhcjp sxbhfmz slm snvm snvmdz sqtsvhzx sqjtlpgd sgnjl sbdldxb sbc sbjbp sbqrzrrg bttz btkkls btxkcdgg bwkq bhrnlp bkfbjpf bdf bdvvvwcz bdp bffcbxp bflrklbq bfgdsft bvkqw bcfrs bcvhcb bjn bxlzqzb bxqdfmc bxp blzfq blbxrqzj brzkgvwg brfl brxb brq brgswx brsjxrx bnkkpfpf bqfmjbz bqv bmp bgmlbht bstfdcgx bsdjnhz bsbzz
+```
 
 
 # Project dependencies:
