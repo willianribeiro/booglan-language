@@ -1,3 +1,5 @@
+# Booglan Language
+
 ```
 A simple service to deal with a text in Booglan language.
 ```
