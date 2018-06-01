@@ -1,13 +1,21 @@
 # -*- coding: utf-8 -*-
-
-# PUBLIC API:
-#   count_prepositions
-#   count_verbs
-#   count_verbs_in_subjunctive_form
-#   create_vocabulary_list
-#   count_pretty_numbers
+# This module is a service to deal with Booglan texts.
+#
+# Public API:
+#   count_prepositions(text)
+#   count_verbs(text)
+#   count_verbs_in_subjunctive_form(text)
+#   count_pretty_numbers(text)
+#   create_vocabulary_list(text)
 
 def count_prepositions(text):
+    '''
+        Counts the number of prepositions in a string.
+        Args:
+            text: the string to be counted.
+        Returns:
+            Integer: total of prepositions.
+    '''
     words = text.split(' ')
     counter = 0
 
@@ -17,8 +25,14 @@ def count_prepositions(text):
     
     return counter
 
-
 def count_verbs(text):
+    '''
+        Counts the number of verbs in a string.
+        Args:
+            text: the string to be counted.
+        Returns:
+            Integer: total of verbs.
+    '''
     words = text.split(' ')
     counter = 0
 
@@ -28,8 +42,14 @@ def count_verbs(text):
     
     return counter
 
-
 def count_verbs_in_subjunctive_form(text):
+    '''
+        Counts the number of verbs in subjunctive form in a string.
+        Args:
+            text: the string to be counted.
+        Returns:
+            Integer: total of verbs in subjunctive form.
+    '''
     words = text.split(' ')
     counter = 0
 
@@ -41,6 +61,13 @@ def count_verbs_in_subjunctive_form(text):
 
 
 def count_pretty_numbers(text):
+    '''
+        Counts the number of pretty numbers in a string.
+        Args:
+            text: the string to be counted.
+        Returns:
+            Integer: total of pretty numbers.
+    '''
     words = text.split(' ')
     unique_words = _remove_duplicated_items(words)
     numbers = _convert_to_decimal_numbers(unique_words)
@@ -48,15 +75,20 @@ def count_pretty_numbers(text):
     return len(pretty_numbers)
 
 
-'''
-    Cria a lista de vocabulário Booglan e a ordena em ordem lexicográfica.
-'''
-def create_vocabulary_list(str):
-    words = str.split(' ')
+def create_vocabulary_list(text):
+    '''
+        Create a vocabulary list (without duplicate words) and sort in a 
+        lexicographic order.
+        Args:
+            text: the string from which the list will be created.
+        Returns:
+            string: a string with unique words ordered lexicographically
+    '''
+    words = text.split(' ')
     unique_words = _remove_duplicated_items(words)
     sorted_words = sorted(unique_words, cmp=_compare_booglan_alphabetical_order)
-    sorted_str = ' '.join(sorted_words)
-    return sorted_str
+    sorted_text = ' '.join(sorted_words)
+    return sorted_text
 
 
 # HELPERS
@@ -141,34 +173,35 @@ def _convert_to_decimal_numbers(numbers):
     
     return decimal_numbers
 
-
-'''
-    A função sorted([], cmp=function) da biblioteca padrão do Python ordena uma lista. Ela aceita
-    como parâmetro uma função de comparação (cmp). Muitas linguagens possuem esse recurso e o Python é
-    uma delas. A ideia dessa função de comparação é dizer para o sorted() COMO ele deve ordenar a lista.
-
-    Funciona da seguinte forma:
-        - Se a função de comparação retornar um número negativo quer dizer que "a" precede "b"
-        - Se a função de comparação retornar um número positivo quer dizer que "b" precede "a"
-        - Se a função de comparação retornar 0 quer dizer que ambos são iguais
-    
-    No caso aqui, a função de comparação é recursiva porque todas as letras da palavra me importa para 
-    a ordenação, não só a primeira. Por isso, se encontro duas palavras que tem a primeira letra igual
-    (abacaxi e abacate por exemplo) eu removo a primeira letra de ambas e prossigo para a próxima iteração
-    até que encontre uma letra diferente ou até chegar o final da palavra.
-
-    Mais detalhes na documentação:
-    https://docs.python.org/2/howto/sorting.html#the-old-way-using-the-cmp-parameter
-'''
 def _compare_booglan_alphabetical_order(a, b):
+    '''
+        Then function sorted([], cmp=function) from the Python Standard Library
+        sorts a list. It receives a comparation function (cmp). A lot of 
+        programming languages has this feature and Python is one of them. The
+        idea of this comparation function is say to sorted() HOW it should sort
+        the list.
+
+        It works as follow:
+            - If the comparation function returns a negative number it means
+            that "a" precedes "b".
+            - If the comparation function returns a positive number it means
+            that "b" precedes "a".
+            - If the comparation function returns 0 it means both are equals.
+
+        In this case, the comparation function is recursive because all the 
+        letter of the word must be considered, not only the first one.
+
+        More details on docs:
+        https://docs.python.org/2/howto/sorting.html#the-old-way-using-the-cmp-parameter
+    '''
     if a == '' and b == '':
-        # "a" e "b" não trocam de lugar
+        # "a" and "b" must be equals
         return 0
     elif a == '':
-        # "a" vem primeiro que "b"
+        # "a" comes first then "b"
         return -1
     elif b == '':
-        # "b" vem primeiro que "a"
+        # "b" comes first than "a"
         return 1
 
     diff = ALPHABET_DICT[a[0]] - ALPHABET_DICT[b[0]]
@@ -178,9 +211,5 @@ def _compare_booglan_alphabetical_order(a, b):
     else:
         return _compare_booglan_alphabetical_order(a[1:], b[1:])
 
-
-'''
-    Remove itens duplicados de uma lista
-'''
 def _remove_duplicated_items(lst):
    return list(set(lst))
