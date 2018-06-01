@@ -1,5 +1,7 @@
 # Booglan Language
 
+[![Build Status](https://travis-ci.org/willianribeiro/booglan-language.svg?branch=master)](https://travis-ci.org/willianribeiro/booglan-language)
+
 ```
 A simple service to deal with a text in Booglan language.
 ```
