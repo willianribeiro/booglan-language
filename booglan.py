@@ -42,9 +42,9 @@ def count_verbs_in_subjunctive_form(text):
 
 def count_pretty_numbers(text):
     words = text.split(' ')
-    unique_words = _remove_duplicate_items(words)
+    unique_words = _remove_duplicated_items(words)
     numbers = _convert_to_decimal_numbers(unique_words)
-    pretty_numbers = [n for n in numbers if n >= 422224 and n % 3 == 0]
+    pretty_numbers = [n for n in numbers if _is_pretty_number(n)]
     return len(pretty_numbers)
 
 
@@ -53,7 +53,7 @@ def count_pretty_numbers(text):
 '''
 def create_vocabulary_list(str):
     words = str.split(' ')
-    unique_words = _remove_duplicate_items(words)
+    unique_words = _remove_duplicated_items(words)
     sorted_words = sorted(unique_words, cmp=_compare_booglan_alphabetical_order)
     sorted_str = ' '.join(sorted_words)
     return sorted_str
@@ -75,6 +75,9 @@ def _is_foo_letter(letter):
 
 
 def _is_preposition(word):
+    if not word:
+        return False
+
     last_letter = word[-1]
     forbidden_letter = 'l'
 
@@ -91,12 +94,12 @@ def _is_preposition(word):
 
 
 def _is_verb(word):
+    if not word:
+        return False
+
     last_letter = word[-1]
 
-    # há um erro no enunciado. lá é dito que um verbo tem 7 letras ou mais.
-    # se eu considerar isso há na verdade 144 verbos, não 71. 
-    # se eu considerar que um verbo tem mais do que 7 letras ai sim é que existe 71 verbos.
-    if len(word) <= 7:
+    if len(word) < 8:
         return False
     
     if _is_foo_letter(last_letter):
@@ -106,6 +109,9 @@ def _is_verb(word):
 
 
 def _is_verb_in_subjunctive_form(verb):
+    if not verb:
+        return False
+
     first_letter = verb[0]
 
     if _is_foo_letter(first_letter):
@@ -113,6 +119,8 @@ def _is_verb_in_subjunctive_form(verb):
     
     return True
 
+def _is_pretty_number(number):
+    return number >= 422224 and number % 3 == 0
 
 def _convert_to_decimal_numbers(numbers):
     decimal_numbers = []
@@ -174,5 +182,5 @@ def _compare_booglan_alphabetical_order(a, b):
 '''
     Remove itens duplicados de uma lista
 '''
-def _remove_duplicate_items(lst): 
+def _remove_duplicated_items(lst):
    return list(set(lst))
