@@ -53,7 +53,7 @@ When we consider Text A as a list of numbers (that is, interpreting each word as
 ```
 
 
-# Project dependencies:
+# Dependencies:
 - [Python 2.7](https://wiki.python.org/moin/BeginnersGuide/Download)
 
 
@@ -66,6 +66,10 @@ python main.py
 ```
 
 
-# Roadmap:
-- Implement tests
-- Translate and improve code comments
+# Running tests:
+
+On terminal, open project root folder and run:
+
+```
+python tests.py -v
+```
